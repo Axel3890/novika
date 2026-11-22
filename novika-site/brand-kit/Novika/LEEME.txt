@@ -1,0 +1,15 @@
+NOVIKA | Calado facetado
+
+Logo Principal · símbolo violeta y nombre tinta, para fondo porcelana o blanco.
+Logo Monocromo · tinta, para fondo porcelana, blanco o taupe.
+Logo Inverso · porcelana, para fondo tinta.
+Logo Vertical · símbolo sobre el nombre para formatos cuadrados o angostos.
+Símbolo · violeta, para fondo porcelana o blanco.
+Avatar · símbolo blanco sobre violeta. PNG de 1080 × 1080 px.
+Favicon · usar favicon.svg y favicon.ico para compatibilidad.
+Los logos horizontales, el vertical y el símbolo tienen fondo transparente.
+
+Mínimos en pantalla · 144 px para el logo completo y 16 px para el símbolo.
+Margen libre · el ancho del tramo vertical de la N calada.
+Paleta · gris porcelana #E4E3DF (60%), taupe seta #8B7E71 (30%)
+y ultra violeta #6B2BFF (10%). Gris porcelana provisional.

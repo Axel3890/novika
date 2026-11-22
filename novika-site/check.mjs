@@ -1,0 +1,10 @@
+import {readFileSync,existsSync} from 'node:fs';
+import vm from 'node:vm';
+const html=readFileSync('dist/index.html','utf8');
+new vm.Script(html.match(/<script>([\s\S]*?)<\/script>/)[1]);
+const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+if(new Set(ids).size!==ids.length)throw Error('Duplicate IDs');
+for(const [,id] of html.matchAll(/href="#([^"]+)"/g))if(!ids.includes(id))throw Error(`Missing anchor ${id}`);
+for(const [,asset] of html.matchAll(/(?:src|href)="(assets\/[^"]+)"/g))if(!existsSync('dist/'+asset))throw Error(`Missing asset ${asset}`);
+for(const name of ['prefers-reduced-motion','aria-expanded','showModal','createObjectURL'])if(!(html+readFileSync('src/menu/StaggeredMenu.jsx','utf8')).includes(name))throw Error(`Missing ${name}`);
+console.log('PASS: JavaScript syntax, unique IDs, navigation targets, local assets, accessible interaction hooks.');
